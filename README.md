@@ -1,4 +1,4 @@
-#Prometheus, Grafana 실습 과정 및 개념 정리
+# Prometheus, Grafana 실습 과정 및 개념 정리
 
 본 실습은 NKS(Ncloud Kubernetes Service)를 이용하여 진행되었습니다. 
 로컬에서 돌리실 경우 로컬 클러스터를 포트 포워딩하여 배포하셔도 무방합니다. 
