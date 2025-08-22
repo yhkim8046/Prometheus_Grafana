@@ -1,3 +1,10 @@
+#
+Prometheus, Grafana 실습 과정 및 개념 정리
+
+본 실습은 NKS(Ncloud Kubernetes Service)를 이용하여 진행되었습니다. 
+로컬에서 돌리실 경우 로컬 클러스터를 포트 포워딩하여 배포하셔도 무방합니다. 
+
+---
 # kube-prometheus-stack 구성 요소 정리
 > Helm 차트 **kube-prometheus-stack** 설치 시 생성되는 주요 리소스들  
 
@@ -50,3 +57,25 @@
 - CPU, 메모리, 디스크, 네트워크 등 OS 레벨 리소스 메트릭 수집
 - 각 워커 노드에 DaemonSet으로 배포되어 동작
 - 예: `node_cpu_seconds_total`, `node_memory_MemAvailable_bytes`
+
+--- 
+# 프로메테우스, 그라파나 설치 과정
+1) Helm 설치 
+$ curl -fsSL https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash 
+$ helm version
+
+2) Helm repo 추가 & kube-prometheus-stack 배포 
+$ helm repo add prometheus-community https://prometheus-community.github.io/helm-charts 
+$ helm repo update 
+$ kubectl create namespace monitoring 
+$ helm install kps prometheus-community/kube-prometheus-stack -n monitoring 
+
+3) Grafana 접속
+# LoadBalancer로 타입 변경 
+$ kubectl -n monitoring patch svc kps-grafana -p '{"spec":{"type":"LoadBalancer"}}' 
+# EXTERNAL-IP 할당 대기(별도 명령) 
+$ kubectl -n monitoring get svc kps-grafana -w
+
+4) 테스트용 Pod 배포 
+$ kubectl run nginx --image=nginx --port=80 
+$ kubectl expose pod nginx --name=nginx-svc --port=80 --target-port=80
