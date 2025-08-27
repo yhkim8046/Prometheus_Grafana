@@ -3,10 +3,10 @@
 ### 실습용 쿠버네티스 아키텍처
 <img width="960" height="528" alt="쿠버네티스아키텍처" src="https://github.com/user-attachments/assets/1145cd60-ae33-49b1-a8dd-d71a8ba0cfa3" />
 
-네임스페이스 GPU, DB, Service를 만들고 그 안에 각 3개의 동적 부하 파드를 배포했습니다.
-각 네임스페이스마다 동일한 양의 Resource Quota 와 Resource Request가 걸려있습니다. 
+네임스페이스 GPU, DB, Service를 만들고 그 안에 각 3개의 동적 부하 파드를 배포
+각 네임스페이스마다 동일한 양의 Resource Quota 와 Resource Request 존재
 
-파드는 prometheusPractice.sh 쉘 스크립트 파일로 배포가 가능합니다.
+파드는 prometheusPractice.sh 쉘 스크립트 파일로 배포가 가능
 
 ## 최종 배포된 대시보드
 <img width="1899" height="986" alt="워크숍대시보드" src="https://github.com/user-attachments/assets/e4715cc5-c2f1-4a1c-b177-808ee9cf12e5" />
