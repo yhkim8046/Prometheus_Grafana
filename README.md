@@ -4,7 +4,7 @@
 로컬에서 돌리실 경우 로컬 클러스터를 포트 포워딩하여 배포하셔도 무방합니다. 
 
 
-<img width="1351" height="811" alt="image" src="https://github.com/user-attachments/assets/b5a4e7ce-075e-4cd5-b837-c908e7ed0a68" />
+[<img width="1351" height="811" alt="image" src="https://github.com/user-attachments/assets/b5a4e7ce-075e-4cd5-b837-c908e7ed0a68" />](https://prometheus.io/docs/introduction/overview/)
 출처: https://prometheus.io/docs/introduction/overview/
 ---
 # kube-prometheus-stack 구성 요소 정리
