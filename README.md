@@ -3,8 +3,9 @@
 본 실습은 NKS(Ncloud Kubernetes Service)를 이용하여 진행되었습니다. 
 로컬에서 돌리실 경우 로컬 클러스터를 포트 포워딩하여 배포하셔도 무방합니다. 
 
+<img width="821" height="439" alt="스크린샷 2025-08-27 오후 4 07 36" src="https://github.com/user-attachments/assets/797acb8f-44f3-4179-8479-8564c6323f1e" />
 
-[<img width="1351" height="811" alt="image" src="https://github.com/user-attachments/assets/b5a4e7ce-075e-4cd5-b837-c908e7ed0a68" />](https://prometheus.io/docs/introduction/overview/)
+
 출처: https://prometheus.io/docs/introduction/overview/
 ---
 # kube-prometheus-stack 구성 요소 정리
